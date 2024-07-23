@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     #header{
+        background-color: rgb(206, 22, 22);
+        padding: 30px;
+        
+    }
+    .carousel{
+      text-align: center;
+    }
+    p{
+      height: 50px;
+      justify-content: center;
+      color:black;
+    }
+    h5{
+      color: white;
+      font-size:46px ;
+      font-style:italic;
+      font-weight: 1000;
+      padding-right: 300px;
+      text-decoration: wavy;
+      
+    }
+    h1{
+      justify-content: center;
+      color:white;
+      text-align: center;
+      
+    }
+    h3{
+      color: white;
+      text-align: center;
+      font-style: italic;
+      
+    }
+    #header ul{
+            display:flex;
+            float: right;
+            padding-right: 20px;
+        }
+        #header ul li{
+            list-style-type: none;
+            color:white;
+            float: right;
+            display: flex;
+            padding-right: 40px;
+        }
+     #header ul li a{
+        text-decoration: none;
+      }
+        #header button{
+          background-color: rgb(40, 156, 40);
+          color:white;
+          height: 30px;
+        }
+        #header button:hover{
+          font-display: calender;
+          background-color: darkgray;
+        }
+        #header p{
+          color:white;
+        }
+      .image2{
+        background-color: rgb(206, 22, 22);
+        display: flex;
+        height:100px ;
+        width: 100%;
+        padding-left: 30px;
+      }
+      .image2 ol{
+            display:inline-flex;
+            float: right;
+        }
+        .image2 ol li{
+            list-style-type: none;
+            padding: 40px;
+            color:white;
+            float: right;
+        }
+     .image2 ol li a{
+        text-decoration: none;
+      }
+    
+    .active{
+        background-color: black;
+    } .row{
+      padding-top: 40px;
+      padding-left: 30PX;
+      padding-right: 20PX;
+      padding-bottom: 30px;
+    }
+     .row button:hover{
+      background-color: rgb(47, 225, 130);
+      transition-duration:1S;
+      
+    }
+    .cotent{
+      height: 80px;
+    }
+    .content dl li{
+      display:inline-flex;
+      justify-content: center;
+      margin-left: 200px;
+      padding: 10px;
+      font-style:italic;
+      font-weight: 700;
+      color: black;
+      text-decoration:underline ;
+
+    }
+     .row button{
+      height: 50px;
+      background-color: rgb(218, 30, 30);
+      color: azure;
+
+    }
+    .text{
+      position: relative;
+      align-items: center;
+    }
+  .image1 {
+    position: absolute;
+    padding: 20px;
+  }
+  .image1 h1 {
+    font-size: 36px;
+    text-transform: uppercase;
+    justify-content: center;
+  }
+   .image2 p{
+    color:black ;
+   }.container{
+    position: relative;
+   } .image1 {
+    position: absolute;
+    padding: 20px;
+    top: 25%;
+  }
+
+  .container img{
+    width: 100%;
+    transition: 400ms;
+  } .container:hover img{
+    transform: scale(1.03);
+  } 
+   .footer{
+    background-color: black;
+    height: 300px;
+    justify-content: center;
+
+  }.footer ul{
+            display:flex;
+           
+        }
+        .footer ul li{
+            list-style-type: none;
+            padding: 40px;
+            color:white;
+        }
+     .footer ul li a{
+        text-decoration: none;
+     }
+  
+     .fa-brands{
+      heigHt:100px;
+      width:100px;
+     } 
+     .logo{
+      justify-content: center;
+
+     }
+     .btn:hover
+     {
+    transform: scale(1.1);
+     }
+
+      .btn li i{
+        display: flex;
+        position: absolute;
+        transition: 0.2s;
+        padding-top: 20px;
+        padding-bottom: 100px;
+      
+      }
+      .btn i:hover{
+        font-size: 80px;
+      }
+      .mail{
+        display: flex;
+        color: aliceblue;
+      }
+    </style>
+    </head>
+    <body>
+    <div id="header">
+      
+        <ul>
+           <h5>pizzarao</h5>
+            <li>ORDER</li>
+            <li>PAGES</li>
+            <li>NEWS</li>
+            <li>STORE </li>
+            <li>order in</li>
+            <p>5458840550</p>
+            <button>cart is empty</button>
+        </ul>
+        <hr>
+        <div class="image2">
+          <ol>
+            <li><i class="fa-solid fa-pizza-slice"></i>pizza</li>
+            <li><i class="fa-solid fa-burger"></i>burger</li>
+            <li><i class="fa-solid fa-carrot"></i>salads</li>
+            <li><i class="fa-solid fa-burger"></i>tacos</li>
+            <li><i class="fa-solid fa-sheet-plastic"></i>wraps</li>
+            <li>fries</li>
+            <li><i class="fa-solid fa-carrot"></i>salads</li>
+            <li><i class="fa-solid fa-champagne-glasses"></i>drinks</li>
+          </ol>
+        </hr>
+   
+  </div>
+  </div>
+    <div class="carousel">
+      <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="text">
+            <img src="https://img.freepik.com/free-photo/pizza-pizza-filled-with-tomatoes-salami-olives_140725-1200.jpg?w=826&t=st=1721194862~exp=1721195462~hmac=8d4d36c0ac84e2760b2af4302322620697b26e55c378358716cf04a9bd9ae824"height="1100px"  width="1300" >
+            <div class="image1">
+              <h1>ALL PIZZA'S ARE AVAILABLE</h1>
+              <h3>FREE DELIVERY</h3>
+            </div>
+          </div>
+          </div>
+          <div class="carousel-item">
+            <div class="text">
+            <img src="https://cdn.pixabay.com/photo/2017/08/06/06/43/pizza-2589575_1280.jpg"height="1100" width="1300">
+            <div class="image1">
+            <h1>POPULAR CHEF'S ARE AVAILABLE</h1>
+            <h3>THIS CAN PROVIDE ALL INDIA</h3>
+          </div>
+          </div>
+          </div>
+          <div class="carousel-item">
+            <div class="text">
+            <img src="https://i0.wp.com/picjumbo.com/wp-content/uploads/yummy-and-tasty-salami-pizza-diavola-close-up-free-photo.jpg?w=1300&quality=50" height="1100">
+            <div class="image1">
+              <h1>pizza bites</h1>
+              <h3>THIS CAN PROVIDE ALL INDIAN SPICES</h3>
+            </div>
+          </div>
+          </div>
+         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+         </button>
+         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+         </button>
+        </div>
+        </div>
+<div class="row">
+    <div class="col-sm-6" style="color: white;">
+      <div class="container">
+      <img src="https://img.freepik.com/free-photo/side-view-chicken-pizza-tray-with-salad-table_141793-12982.jpg?t=st=1720763155~exp=1720766755~hmac=5c23395357efa07b3cf69a3b81af3500e8782cbae5b088acedf38377ad90b683&w=500" width="100%" height="560px">
+     <div class="image1">
+      <h1>GRILLED CHICKEN</h1>
+      <h3>ONLY IN LOCAL HOT AND SPICY</h3>
+     </div>
+     </div>
+     </div>
+     <div class="col-sm-6">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="container">
+            <img src="C:\Users\DT010\Downloads\640-delicious-hot-and-crispy-fried-potatoes-fast-food-and-restaurant-products.jpg" height="250px" width="100%">
+            <div class="image1">
+              <h1>FREE FRIES </h1>
+              <h3>FOR ONLINE ORDER</h3>
+              </div> 
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="container">
+            <img src="https://t3.ftcdn.net/jpg/01/57/74/36/240_F_157743662_YKJEVXytEgPz08DgswRMPQMgv4D6cKL0.jpg"height="250px" width="100%" >
+            <div class="image1">
+              <h1>burgers</h1>
+              <h3>hot</h3>
+              </div> 
+          </div>
+        </div>
+      </div>
+      <div class="new">
+        <div class="container">
+          <img src="https://images.unsplash.com/photo-1604503036177-6ac038850279?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDAwfHxjb2xkJTIwZHJpbmt8ZW58MHx8MHx8fDA%3D"height="250px" width="100%">
+          <div class="image1">
+            <h1>ICED COOLED </h1>
+            <h3>SUMMERS</h3>
+            </div> 
+      </div>
+      </div>
+     </div>
+</div>
+   
+<div class="content">
+  <dl>
+    <li>wraps </li>
+    <li>pizza sets</li>
+    <li>burgers</li>
+  </dl>
+</div>
+<div class="row">
+  <div class="col-sm-4"><img src="https://pizzaro.madrasthemes.com/wp-content/uploads/2016/09/burgers-8-300x300.png">
+    <h2>bacon burger</h2>
+    <p>A mighty meaty double helping of all the </br>reasons you love our burger </p>
+    <button>add to cart</button></div>  
+  <div class="col-sm-4"><img src="https://pizzaro.madrasthemes.com/wp-content/uploads/2016/09/burgers-7-300x300.png">
+    <h2>cheese burger</h2>
+    <p>A mighty meaty double helping of all the </br>reasons you love our burger </p>
+    <button>add to cart</button></div>
+  <div class="col-sm-4"><img src="https://pizzaro.madrasthemes.com/wp-content/uploads/2016/10/burgers-3-300x300.png">
+    <h2>chicken burger</h2>
+    <p>A mighty meaty double helping of all the </br>reasons you love our burger </p>
+    <button>order now</button></div>
+    </div>
+<div class="row">
+  <div class="text">
+  <div class="col-sm-12">
+    <img src="https://us.123rf.com/450wm/atlasfoto/atlasfoto2009/atlasfoto200901203/155534459-hands-hold-box-with-tasty-pizza-on-red-background.jpg?ver=6" height="500px" width="1200px">
+    <div class="image1">
+      <h1>pizza of the day</h1>
+      <h3>999</br>each -chicken wings</h3>
+      <button>order now</button>
+    </div>
+  </div>
+  </div>
+    <div class="col-sm-6"><img src="https://pizzaro.madrasthemes.com/wp-content/uploads/2016/10/pizza-3-300x300.png">
+      <h1>TRIO CHEESE</h1>
+      <button>order now</button></div>
+    <div class="col-sm-6"><img src="https://pizzaro.madrasthemes.com/wp-content/uploads/2016/10/pizza-2-300x300.png">
+      <h1> APRICOT CHICKEN</h1>
+      <button>order now</button></div>
+    <div class="col-sm-6"><img src="https://pizzaro.madrasthemes.com/wp-content/uploads/2016/10/pizza-3-300x300.png">
+      <h1>ITALLIANO ORIGINAL</h1>
+      <button>order now</button></div>
+    <div class="col-sm-6"><img src="https://pizzaro.madrasthemes.com/wp-content/uploads/2016/10/pizza-4-300x300.png">
+      <h1>GARLIC PIZZA</h1>
+      <button>order now</button></div>
+  
+  <div class="text">
+    <img src="https://thumbs.dreamstime.com/b/pizza-pepperoni-cheese-salami-vegetables-58914487.jpg" width="1200px;">
+    <div class="image1">
+    <h1>pepperoni pizza</h1>
+    <h3>extra-virgin olive oil,garlic,mozzerilla ,cheese,onions,mushrooms,fresh tomatos</h3>
+    <button>ADD TO CART</button>
+  </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-3">
+  <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpTbhLUXTKDAMvqkLLoSyEYcO5vAhcyAsmDUwr12xXQ_5LAvM6" height="200px" width="200px" >
+  <h2>BEST QUALITY</h2>
+  <p>praesent pulvinar</br>neque pellentesque</br>mattis prettium</p>
+</div>
+  <div class="col-sm-3">
+    <img src="https://www.iconsdb.com/icons/preview/silver/alarm-clock-3-xxl.png"height="200px" width="200px"  >
+    <h2>ON TIME</h2>
+  <p>praesent pulvinar</br>neque pellentesque</br>mattis prettium</p>
+</div>
+  <div class="col-sm-3">
+    <img src="https://img.freepik.com/premium-vector/hat-chef-logo-template_677077-267.jpg?"width="250px" height="200px">
+    <h2>MASTER CHEF'S</h2>
+  <p>praesent pulvinar</br>neque pellentesque</br>mattis prettium</p>
+</div>
+  <div class="col-sm-3">
+    <img src="https://img.freepik.com/premium-vector/vector-continuous-one-line-catering-dish-illustration_804425-1095.jpg?"height="200px" width="200px">
+    <h2>TASTE FOOD</h2>
+  <p>praesent pulvinar</br>neque pellentesque</br>mattis prettium</p>
+</div>
+  </div>
+  <div class="row">
+    <h3>warning:fill correct instagram information to show new feed.</h3>
+  </div>
+  <div class="footer">
+    <div class="btn">
+    <ul>
+   <li><i class="fa-brands fa-facebook" ></i></li>
+   <li><i class="fa-brands fa-square-twitter"></i></li>
+   <li><i class="fa-brands fa-instagram"></i></li>
+   <li><i class="fa-brands fa-youtube"></i></li>
+   <li><i class="fa-solid fa-square-nfi"></i></li>
+  </ul>
+</div>
+  <div clasas="logo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQM8w7npgne6yVDrzPIRNjo4T4Fiizbo-FwrA&s" height="100px" width="100px">
+  </div>
+  <div class="mail">
+    <h3>pizzarao restaurant</br></h3>
+    <h3>901-947 south drive,houston,tx 77057,india</br></h3>
+    <h3>Telephone:+1 555 1234</br></h3>
+    <h3>Fax:+1 555 4444</br></h3>
+  </div>
+  </div>
+</div>
+
+</body>
+</html>
