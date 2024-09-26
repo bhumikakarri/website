@@ -8,11 +8,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-     #header{
-        background-color: rgb(206, 22, 22);
-        padding: 29px;
-        
-    }
+      *{
+        padding:0;
+        margin: 0;
+        text-decoration: none;
+        list-style-type: none;
+        box-sizing: border-box;
+      }
+      nav{
+        background-color:  rgb(218, 30, 30);
+        height: 80px;
+        width: 100%;
+
+      }
+      label.logo{
+        color: white;
+        font-size: 35px;
+        line-height: 80px;
+        padding: 0 100px;
+        font-weight: bold;
+
+      }
+      nav ul{
+        float: right;
+        margin-right: 20px;
+      }
+      nav ul li{
+        display: inline-block;
+        line-height: 80px;
+        margin: 0 5px;
+      }
+      nav ul li a{
+        color: white;
+        font-size: 17px;
+        text-transform: uppercase;
+        padding: 7px 13px;
+        border-radius: 3px;
+      }
+      .checkbtn{
+        font-size: 30px;
+        color: white;
+        float: right;
+        line-height: 80px;
+        margin-right: 40px;
+        cursor: pointer;
+        display: none;
+      }#check{
+        display: none;
+      }
+      @media (max-width:952px){
+        label.logo{
+          font-size: 30px;
+          padding-left: 50px;
+
+        }nav ul li a{
+          font-size: 16px;
+
+        } @media (max-width:858px){
+          .checkbtn{
+          display: block;
+        }ul{
+          position: fixed;
+          width: 100%;
+          height: 100vh;
+          background:  rgb(180, 15, 15);
+          top: 80px;
+          left: -100%;
+          transition: all .5s;
+
+          text-align: center;
+        }
+        nav ul li{
+          display: block;
+          margin: 50px 0;
+          line-height: 30px;
+
+        }
+        nav ul li a{
+          font-size: 20px;
+        }
+        #check:checked ~ul{
+          left: 0;
+        }
+
+
+        }
+      }
+    
     .carousel{
       text-align: center;
     }
@@ -144,8 +226,16 @@
     position: absolute;
     padding: 20px;
     top: 25%;
+    animation-name: hello;  
+         animation-duration: 5s; 
+         animation-iteration-count: 1;
+      
+         animation-range: entry 0% cover 80%;
   }
-
+  @keyframes hello{
+  from{transform: scale(0); }
+to{transform: scale(1);}
+}
   .container img{
     width: 100%;
     transition: 200ms;
@@ -198,37 +288,43 @@
         display: flex;
         color: aliceblue;
       }
+      .container2{
+  animation-name: ani3;
+  animation-duration: 4s;
+ animation-timeline: view();
+  
+  
+}
+@keyframes ani3
+ {
+  from{
+    scale:0;
+  }
+  to{
+    scale:1;
+  }
+} h2{
+  color: black;
+}
+
     </style>
     </head>
     <body>
-    <div id="header">
-      
+      <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">Pizzarao</label>
         <ul>
-           <h5>pizzarao</h5>
-            <li>ORDER</li>
-            <li>PAGES</li>
-            <li>NEWS</li>
-            <li>STORE </li>
-            <li>order in</li>
-            <p>5458840550</p>
-            <button>cart is empty</button>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">cart</a></li>
         </ul>
-        <hr>
-        <div class="image2">
-          <ol>
-            <li><i class="fa-solid fa-pizza-slice"></i>pizza</li>
-            <li><i class="fa-solid fa-burger"></i>burger</li>
-            <li><i class="fa-solid fa-carrot"></i>salads</li>
-            <li><i class="fa-solid fa-burger"></i>tacos</li>
-            <li><i class="fa-solid fa-sheet-plastic"></i>wraps</li>
-            <li>fries</li>
-            <li><i class="fa-solid fa-carrot"></i>salads</li>
-            <li><i class="fa-solid fa-champagne-glasses"></i>drinks</li>
-          </ol>
-        </hr>
+      </nav>
    
-  </div>
-  </div>
     <div class="carousel">
       <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
@@ -272,7 +368,7 @@
 <div class="row">
     <div class="col-sm-6" style="color: white;">
       <div class="container">
-      <img src="https://img.freepik.com/free-photo/side-view-chicken-pizza-tray-with-salad-table_141793-12982.jpg?t=st=1720763155~exp=1720766755~hmac=5c23395357efa07b3cf69a3b81af3500e8782cbae5b088acedf38377ad90b683&w=500" width="100%" height="560px">
+      <img src="https://img.freepik.com/free-photo/delicious-burger-with-fresh-ingredients_23-2150857908.jpg?t=st=1727371993~exp=1727375593~hmac=097ac2e6c24a0205962e9869999bb0678c7468fb0d902e4d5096e53053de8d24&w=360" width="100%" height="560px">
      <div class="image1">
       <h1>GRILLED CHICKEN</h1>
       <h3>ONLY IN LOCAL HOT AND SPICY</h3>
@@ -320,20 +416,31 @@
   </dl>
 </div>
 <div class="row">
-  <div class="col-sm-4"><img src="https://pizzaro.madrasthemes.com/wp-content/uploads/2016/09/burgers-8-300x300.png">
+  
+  <div class="col-sm-4">
+    <div class="container2">
+      <img src="https://pizzaro.madrasthemes.com/wp-content/uploads/2016/09/burgers-8-300x300.png">
     <h2>bacon burger</h2>
     <p>A mighty meaty double helping of all the </br>reasons you love our burger </p>
-    <button>add to cart</button></div>  
-  <div class="col-sm-4"><img src="https://pizzaro.madrasthemes.com/wp-content/uploads/2016/09/burgers-7-300x300.png">
+    <button>add to cart</button></div> 
+    </div> 
+  <div class="col-sm-4"> 
+    <div class="container2">
+      <img src="https://pizzaro.madrasthemes.com/wp-content/uploads/2016/09/burgers-7-300x300.png">
     <h2>cheese burger</h2>
     <p>A mighty meaty double helping of all the </br>reasons you love our burger </p>
-    <button>add to cart</button></div>
-  <div class="col-sm-4"><img src="https://pizzaro.madrasthemes.com/wp-content/uploads/2016/10/burgers-3-300x300.png">
+    <button>add to cart</button></div></div>
+  <div class="col-sm-4">
+    <div class="container2">
+      <img src="https://pizzaro.madrasthemes.com/wp-content/uploads/2016/10/burgers-3-300x300.png">
     <h2>chicken burger</h2>
     <p>A mighty meaty double helping of all the </br>reasons you love our burger </p>
-    <button>order now</button></div>
+    <button>order now</button></div></div>
     </div>
+    
+</div>
 <div class="row">
+  
   <div class="text">
   <div class="col-sm-12">
     <img src="https://us.123rf.com/450wm/atlasfoto/atlasfoto2009/atlasfoto200901203/155534459-hands-hold-box-with-tasty-pizza-on-red-background.jpg?ver=6" height="500px" width="1200px">
@@ -344,19 +451,20 @@
     </div>
   </div>
   </div>
+
     <div class="col-sm-6"><img src="https://pizzaro.madrasthemes.com/wp-content/uploads/2016/10/pizza-3-300x300.png">
-      <h1>TRIO CHEESE</h1>
+      <h2>TRIO CHEESE</h2>
       <button>order now</button></div>
     <div class="col-sm-6"><img src="https://pizzaro.madrasthemes.com/wp-content/uploads/2016/10/pizza-2-300x300.png">
-      <h1> APRICOT CHICKEN</h1>
+      <h2> APRICOT CHICKEN</h2>
       <button>order now</button></div>
     <div class="col-sm-6"><img src="https://pizzaro.madrasthemes.com/wp-content/uploads/2016/10/pizza-3-300x300.png">
-      <h1>ITALLIANO ORIGINAL</h1>
+      <h2>ITALLIANO ORIGINAL</h2>
       <button>order now</button></div>
     <div class="col-sm-6"><img src="https://pizzaro.madrasthemes.com/wp-content/uploads/2016/10/pizza-4-300x300.png">
-      <h1>GARLIC PIZZA</h1>
+      <h2>GARLIC PIZZA</h2>
       <button>order now</button></div>
-  
+
   <div class="text">
     <img src="https://thumbs.dreamstime.com/b/pizza-pepperoni-cheese-salami-vegetables-58914487.jpg" width="100%;">
     <div class="image1">
@@ -414,3 +522,9 @@
 
 </body>
 </html>
+
+
+
+
+
+
